@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wordle ❤️</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/wordle.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Wordle</h1>
+    <p class="subtitle">Guess the word 💖</p>
+
+    <div id="grid" class="grid"></div>
+
+    <input
+      type="text"
+      id="guessInput"
+      maxlength="5"
+      placeholder="Enter 5-letter word"
+      autofocus
+    />
+
+    <button id="submitBtn">Submit</button>
+
+    <p id="message"></p>
+
+    <a href="../index.html" class="back-link">← Back home</a>
+  </div>
+
+  <script src="../js/state.js"></script>
+  <script src="../js/wordle.js?v=2"></script>
+    <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const url = link.href;
+        document.body.classList.remove("loaded");
+        setTimeout(() => window.location.href = url, 300);
+      });
+    });
+  </script>
+</body>
+</html>

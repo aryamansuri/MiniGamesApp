@@ -1,0 +1,157 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at top, #ffe3ec, #ffc2d1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main container */
+.container {
+  background: white;
+  padding: 56px 64px;
+  border-radius: 28px;
+  text-align: center;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Subtitle */
+.subtitle {
+  margin-top: 14px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Menu cards */
+.menu {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+/* Individual card */
+.card {
+  text-decoration: none;
+  padding: 28px 24px;
+  border-radius: 22px;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #ff4d6d;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #666;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+}
+
+.score {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff4d6d;
+}
+
+.reset-btn {
+  margin-top: 14px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  background: #eee;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background: #ddd;
+}
+
+.card.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  transform: none;
+}
+
+.btn {
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff4d6d, #ff8fa3);
+  color: white;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+.btn.secondary {
+  background: #eee;
+  color: #444;
+}
+
+.final-result {
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: 18px;
+  background: #fff3f6;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.final-result h2 {
+  margin: 0;
+  color: #ff4d6d;
+}
+
+.prize-box {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #ffe6ee;
+  font-weight: 600;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}

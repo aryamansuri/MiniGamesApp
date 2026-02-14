@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Valentine’s Day ❤️</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Valentine’s Day, Afrrin ❤️</h1>
+    <p class="subtitle">
+      Little mini games action cuz I know how much you love winning.
+    </p>
+
+    <p id="scoreDisplay" class="score"></p>
+    <button id="resetBtn" class="reset-btn">
+    Restart Attempt
+    </button>
+
+    <div id="finalResult" class="final-result" style="display:none;">
+      <h2 id="finalTitle"></h2>
+      <p id="finalMessage"></p>
+
+      <button id="revealBtn" class="btn">Reveal!!!</button>
+
+      <div id="prizeBox" class="prize-box" style="display:none;">
+        <p id="prizeText"></p>
+      </div>
+    </div>
+
+    <div class="menu">
+      <a href="games/wordle.html" class="card" data-game="wordle">
+        <h2>Wordle</h2>
+        <p>A classic</p>
+      </a>
+
+      <a href="games/connections.html" class="card" data-game="connections">
+        <h2>Connections</h2>
+        <p>Word hunt was too hard to make 😅</p>
+      </a>
+
+      <a href="games/quiz.html" class="card" data-game="quiz">
+        <h2>Quiz Time</h2>
+        <p>Let’s see how well you know us.</p>
+      </a>
+    </div>
+  </div>
+  <script src="js/state.js"></script>
+  <script src="js/home.js"></script>
+    <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const url = link.href;
+        document.body.classList.remove("loaded");
+        setTimeout(() => window.location.href = url, 300);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Connections</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/connections.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Our Connections 💞</h1>
+    <p id="message">Select 4 related tiles</p>
+    <p id="livesDisplay">Lives remaining: 4</p>
+
+    <div id="solvedArea" class="solved-area"></div>
+    <div id="grid" class="grid"></div>
+
+    <button id="submitBtn" class="btn">Submit Group</button>
+    <button id="finishBtn" class="btn secondary" style="display:none;">Finish →</button>
+  </div>
+
+  <script src="../js/state.js"></script>
+  <script src="../js/connections.js?v=2"></script>
+  <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const url = link.href;
+        document.body.classList.remove("loaded");
+        setTimeout(() => window.location.href = url, 300);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Quiz ❤️</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/quiz.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Our Quiz 💖</h1>
+    <p id="questionText" class="subtitle"></p>
+
+    <div id="options" class="options"></div>
+
+    <p id="progress"></p>
+  </div>
+
+  <script src="../js/state.js"></script>
+  <script src="../js/quiz.js"></script>
+    <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const url = link.href;
+        document.body.classList.remove("loaded");
+        setTimeout(() => window.location.href = url, 300);
+      });
+    });
+  </script>
+</body>
+</html>

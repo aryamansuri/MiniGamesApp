@@ -1,0 +1,43 @@
+.options {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.option-btn {
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: #f3f3f3;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.option-btn:hover {
+  transform: translateY(-2px);
+  background: #ececec;
+}
+
+.option-btn.correct {
+  background: #6aaa64;
+  color: white;
+}
+
+.option-btn.wrong {
+  background: #d9534f;
+  color: white;
+}
+
+.next-btn {
+  margin-top: 24px;
+  align-self: flex-end;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
